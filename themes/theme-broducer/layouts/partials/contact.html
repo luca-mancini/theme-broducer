@@ -1,0 +1,69 @@
+<section class="contact-section anchor-section" id="contact">
+  <h3>{{ .Site.Params.contact.title }}</h3>
+  <content class="contact-content">
+    <p>{{ .Site.Params.contact.description }}</p>
+
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" rows="10" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+
+      <input type="hidden" name="_email.subject" value="New message from your website's contact form!" />
+
+      <input type="checkbox" name="miele" style="display: none" tabindex="-1" autocomplete="off" />
+      <input type="hidden" name="_append" value="false" />
+    </form>
+  </content>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Collect form data
+      const formData = new FormData(this);
+
+      // Convert form data to JSON
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      // Send the form data using fetch
+      fetch({{ .Site.Params.contact.submit_link }}, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent",
+            text: "Your message has been sent successfully!",
+            confirmButtonText: "OK",
+            background: "var(--background-color)",
+            color: "var(--text-color)",
+          });
+
+          // Optionally, reset the form here
+          document.getElementById("contact-form").reset();
+        })
+        .catch((error) => {
+          console.error(error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "There was an error sending your message.",
+            confirmButtonText: "Try Again",
+            background: "var(--background-color)",
+            color: "var(--text-color)",
+          });
+        });
+    });
+  </script>
+</section>

@@ -1,0 +1,7 @@
+<section class="about-section anchor-section" id="about">
+  <h3>{{ .Site.Params.about.title }}</h3>
+  <img class="about-image" src="{{ .Site.Params.about.image }}">
+  {{ with .Site.GetPage "about"}}
+    {{ .Content }}
+  {{ end }}
+</section>

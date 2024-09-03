@@ -1,0 +1,15 @@
+<style>
+  :root {
+    --primary-color: {{ .Site.Params.colors.primary }};
+    --secondary-color: {{ .Site.Params.colors.secondary }};
+    --background-color: {{ .Site.Params.colors.background }};
+
+    --primary-font: {{ .Site.Params.fonts.primary }};
+    --secondary-font: {{ .Site.Params.fonts.secondary }};
+
+    /* Hero section */
+    --hero-image: url("{{ .Site.Params.hero.image }}");
+    --hero-height-vh: {{ .Site.Params.hero.height }}vh;
+    --hero-height-svh: {{ .Site.Params.hero.height }}svh;
+  }
+</style>

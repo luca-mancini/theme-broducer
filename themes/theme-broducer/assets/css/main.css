@@ -1,0 +1,97 @@
+:root {
+  --h1: clamp(2rem, 6vw, 3rem);
+  --h2: clamp(1.75rem, 5vw, 2.5rem);
+  --h3: clamp(1.5rem, 4vw, 2rem);
+  --h4: clamp(1.25rem, 3vw, 1.5rem);
+  --h5: clamp(1rem, 2vw, 1.25rem);
+  --h6: clamp(0.875rem, 1.5vw, 1rem);
+  --p: clamp(1rem, 1.5vw, 1.125rem);
+
+  --h1: clamp(2rem, calc(2rem + ((1vw - 0.48rem) * 2.0833)), 6rem);
+  --h2: clamp(1.75rem, calc(1.75rem + ((1vw - 0.48rem) * 1.6927)), 5rem);
+  --h3: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 1.3021)), 4rem);
+  --h4: clamp(1.25rem, calc(1.25rem + ((1vw - 0.48rem) * 0.9115)), 3rem);
+  --h5: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.7813)), 2.5rem);
+  --h6: clamp(0.875rem, calc(0.875rem + ((1vw - 0.48rem) * 0.5859)), 2rem);
+  --p: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.5208)), 2rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-color);
+  scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.page-content {
+  max-width: 1080px;
+  width: 90%;
+  margin: auto;
+}
+
+.page-content [class$="-section"] {
+  padding: 5vh 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
+p {
+  font-size: var(--p);
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--p);
+}
+
+hr {
+  width: 50%;
+  margin: 15px auto;
+}
+
+@media (min-width: 3240px) {
+  .page-content {
+    max-width: 2160px;
+  }
+}

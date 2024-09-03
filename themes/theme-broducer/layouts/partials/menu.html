@@ -1,0 +1,15 @@
+{{ with site.Menus.main }}
+<nav class="header-menu">
+  <input type="checkbox" id="menu-check" />
+  <label class="menu-open" for="menu-check"><i class="bi bi-list"></i></label>
+  <label class="menu-overlay" for="menu-check"></label>
+  <ul class="menu-list">
+    <label class="menu-close" for="menu-check"><i class="bi bi-x-lg"></i></label>
+    {{ range . }}
+    <li class="menu-item">
+      <p><a class="menu-link" href="{{ .PageRef }}">{{ .Name }}</a></p>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

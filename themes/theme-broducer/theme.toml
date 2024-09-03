@@ -1,0 +1,26 @@
+name = "The Broducer's Theme"
+license = 'GNU GPLv3'
+licenselink = 'https://gitlab.com/luca-mancini/theme-broducer/LICENSE'
+description = 'A Hugo theme tailored for music producers. The main objective is to provide a straightforward, almost-single-file configuration, where you can define all your data and have your page ready in a matter of minutes.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://gitlab.com/luca-mancini/theme-broducer'
+
+# If you have a running demo of the theme
+demosite = 'https://luca-mancini.gitlab.io/theme-broducer/'
+
+# Taxonomy terms
+#tags = ['blog', 'company']
+#features = ['some', 'awesome', 'features']
+
+# If the theme has multiple authors
+authors = [
+  {name = 'Luca Mancini', homepage = 'https://www.lucamancini.com'},
+  {name = 'Georgi Zhelyazkov', homepage = 'https://sinistersoundworks.com'}
+]
+
+# If porting an existing theme
+[original]
+  author = 'y7kim'
+  homepage = 'https://github.com/y7kim/agency-jekyll-theme'
+  repo = 'https://github.com/y7kim/agency-jekyll-theme'

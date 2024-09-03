@@ -1,0 +1,21 @@
+footer {
+  min-height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  footer {
+    flex-direction: column-reverse;
+    margin-bottom: 2vh;
+  }
+}
+
+.social-links .bi {
+  margin: 0 3px;
+}
+
+.social-links .bi:hover {
+  color: var(--secondary-color);
+}

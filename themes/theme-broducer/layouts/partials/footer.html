@@ -1,0 +1,10 @@
+<footer>
+  <p>Copyright &copy; Broducers {{ now.Year }}</p>
+  <div class="social-links">
+  {{ range $key, $value := .Site.Params.social }}
+    <a href="{{ index $value 0 }}" target="_blank">
+      <i class="{{ index $value 1 }}"></i>
+    </a>
+  {{ end }}
+  </div>
+</footer>

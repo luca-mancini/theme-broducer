@@ -1,0 +1,13 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <img class="hero-logo" src="{{ .Site.Params.hero.logo }}">
+    <h2>{{ .Site.Params.hero.title }}</h2>
+    <h3 class="hero-subtitle-desktop">{{ .Site.Params.hero.subtitle_desktop }}</h3>
+    <span class="hero-subtitle-mobile">
+      {{ range .Site.Params.hero.subtitle_mobile }}
+        <h3>{{ . }}</h3>
+      {{ end }}
+    </span>
+    <a class="hero-button" type="button" href="{{ .Site.Params.hero.button_link }}">{{ .Site.Params.hero.button_label }}</a>
+  </div>
+</section>

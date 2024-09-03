@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+  {{ "<!-- Static CSS and JS -->" | safeHTML }}
+  {{ partialCached "head/css.html" . }}
+  {{ partialCached "head/js.html" . }}
+
+  {{ "<!-- CSS variables -->" | safeHTML }}
+  {{ partial "css-variables.html" . }}
+
+  {{ "<!-- Favicons -->" | safeHTML }}
+  {{ partial "favicon.html" . }}
+
+  {{ "<!-- Fonts -->" | safeHTML }}
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=lato:400" rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=oswald:400" rel="stylesheet" />
+</head>

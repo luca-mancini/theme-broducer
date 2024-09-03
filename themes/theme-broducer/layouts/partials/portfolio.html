@@ -1,0 +1,17 @@
+<section class="portfolio-section anchor-section" id="portfolio">
+  <h3>{{ .Site.Params.portfolio.title }}</h3>
+  <p>{{ .Site.Params.portfolio.description }}</p>
+  <div class="portfolio-grid">
+    {{ range first .Site.Params.portfolio.max_releases (where .Site.RegularPages.ByDate.Reverse "Section" "portfolio") }}
+    <div class="portfolio-item">
+      <img src="{{ .Params.artwork }}" alt="" />
+      <audio class="player" controls>
+        <source src="{{ .Params.audio }}" type="audio/mp3" />
+      </audio>
+      <h5>{{ .Params.band }}</h5>
+      <h6>{{ .Title }}</h6>
+      <p>{{ .Content }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>

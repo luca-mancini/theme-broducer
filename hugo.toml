@@ -1,0 +1,78 @@
+baseURL = 'https://luca-mancini.gitlab.io/theme-broducer/'
+languageCode = 'en-us'
+title = 'Broducer'
+description = 'Mixing - Mastering'
+theme = "theme-broducer"
+disableKinds = ["taxonomy", "section"]
+
+[params.colors]
+  primary = "#CFD0C3"
+  secondary = "#A08A73"
+  background = "#232635"
+
+[params.fonts]
+  primary = "Lato"
+  secondary = "Oswald"
+
+[[menus.main]]
+  name = 'Services'
+  pageRef = '#services'
+  weight = 10
+
+[[menus.main]]
+  name = 'Portfolio'
+  pageRef = '#portfolio'
+  weight = 20
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '#about'
+  weight = 30
+
+[[menus.main]]
+  name = 'Contact'
+  pageRef = '#contact'
+  weight = 40
+
+[params.hero]
+  image = "/theme-broducer/images/hero/hero_image.jpg"
+  height = 100
+  logo = "images/hero/hero_logo.png"
+  title = "Welcome to the Broducer's website"
+  subtitle_desktop = "MIXING • MASTERING • MUSIC PRODUCTION"
+  subtitle_mobile = ["MIXING", "•", "MASTERING", "•", "MUSIC PRODUCTION"]
+  button_label = "Produce more"
+  button_link = "#about"
+
+[params.services]
+  enable = true
+  title = "Services"
+  description = "Transform your music with my top-tier services. I offer professional mixing, mastering, and music production to elevate your sound to the next level."
+
+[params.portfolio]
+  enable = true
+  title = "Portfolio"
+  description = "Explore my showcase of diverse projects and collaborations, demonstrating my expertise in music production, mixing, and mastering. Discover how I've helped artists achieve their creative visions and elevate their sound to new heights."
+  max_releases = 6
+
+[params.contact]
+  enable = true
+  title = "Contact Me"
+  description = "Let's connect! Whether you're ready to start a new project or just have a question, I'm here to help. Reach out, and let's create something amazing together."
+  submit_link = "https://submit-form.com/your-token"
+
+[params.about]
+  enable = true
+  title = "About me"
+  image = "images/about/about_image.jpg"
+
+[params.footer]
+  enable = true
+
+[params.social]
+  01_mastodon = ["https://www.mastodon.com", "bi bi-mastodon"]
+  02_youtube = ["https://www.youtube.com", "bi bi-youtube"]
+  03_twitter = ["https://www.x.com", "bi bi-twitter-x"]
+  04_facebook = ["https://www.facebook.com", "bi bi-facebook"]
+  05_instagram = ["https://www.instagram.com", "bi bi-instagram"]
+  06_tiktok = ["https://www.tiktok.com", "bi bi-tiktok"]

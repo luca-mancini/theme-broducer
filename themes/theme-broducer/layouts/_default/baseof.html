@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+{{ "<!-- Head -->" | safeHTML }}
+{{ partial "head.html" . }}
+
+<body id="home">
+  {{ "<!-- Header -->" | safeHTML }}
+  {{ partial "header.html" . }}
+
+  {{ "<!-- Hero section -->" | safeHTML }}
+  {{ partial "hero.html" . }}
+
+  {{ "<!-- Page content -->" | safeHTML }}
+  <div class="page-content">
+
+    {{ "<!-- Services section -->" | safeHTML }}
+    {{ if .Site.Params.services.enable }}
+      {{ partial "services.html" . }}
+    {{ end }}
+
+    {{ "<!-- Portfolio section -->" | safeHTML }}
+    {{ if .Site.Params.portfolio.enable }}
+      {{ partial "portfolio.html" . }}
+    {{ end }}
+
+    {{ "<!-- About section -->" | safeHTML }}
+    {{ if .Site.Params.about.enable }}
+      {{ partial "about.html" . }}
+    {{ end }}
+
+    {{ "<!-- Contact section -->" | safeHTML }}
+    {{ if .Site.Params.contact.enable }}
+      {{ partial "contact.html" . }}
+    {{ end }}
+
+    {{ "<!-- Footer -->" | safeHTML }}
+    {{ if .Site.Params.footer.enable }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </div>
+</body>
+</html>

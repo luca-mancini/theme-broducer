@@ -1,0 +1,14 @@
+<section class="services-section anchor-section" id="services">
+  <h3>{{ .Site.Params.Services.title }}</h3>
+  <p>{{ .Site.Params.Services.description }}</p>
+  <div class="services-grid">
+    {{ range (where .Site.RegularPages "Section" "services") }}
+    <div class="services-item">
+      <i class=" {{ .Params.icon }}"></i>
+      <hr />
+      <h4>{{ .Title }}</h4>
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </div>
+</section>
